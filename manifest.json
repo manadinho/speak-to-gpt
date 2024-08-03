@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "SpeakToGPT",
+    "version": "1.0.0",
+    "description": "SpeakToGPT revolutionizes the way you interact with AI by enabling voice commands to communicate directly with a GPT-powered assistant. This Chrome extension is designed for users who seek a seamless, hands-free experience in browsing, information retrieval, and digital interactions. By simply speaking to your browser, SpeakToGPT converts your voice into real-time commands and queries that the GPT model processes instantly, offering you intelligent and context-aware responses",
+    "icons": {
+        "16": "assets/images/icon-16x16.png",
+        "48": "assets/images/icon-48x48.png",
+        "128": "assets/images/icon-128x128.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"],
+            "css": ["content.css"]
+        }
+    ]
+    
+}
